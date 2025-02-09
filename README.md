@@ -28,7 +28,7 @@ The sources of my research to create this guide are listed at the end. This guid
 
 ---
 
-## 🛠️ Installation
+## Step 1 :🛠️ Installation
 
 ### 1. Update the system:
 
@@ -105,22 +105,22 @@ docker-compose --version
 
 ---
 
-## 🛠️ Installing the Palworld Server
+## Installing the Palworld Server
 
-### 1. Create the server directory:
+### 13. Create the server directory:
 
 ```bash
 mkdir -p /home/servers/palworld-server
 cd /home/servers/palworld-server
 ```
 
-### 2. Create the `docker-compose.yml` file:
+### 14. Create the `docker-compose.yml` file:
 
 ```bash
 nano docker-compose.yml
 ```
 
-### 3. Add the following content to `docker-compose.yml`:
+### 14. Add the following content to `docker-compose.yml`:
 
 ```yaml
 version: '3.8'
@@ -145,14 +145,14 @@ services:
     restart: unless-stopped
 ```
 
-### 4. Start the server:
+### 15. Start the server:
 
 ```bash
 systemctl restart docker
 docker-compose up -d
 ```
 
-### 5. Get the server's IP address:
+### 16. Get the server's IP address:
 
 ```bash
 hostname -I
@@ -182,7 +182,84 @@ docker-compose up -d
 
 ⚠️ **Warning**: The Palworld server may take some time to fully start (usually less than 1 minute).
 
----
 
-Do you want to add a specific section or improvement? 🚀
+## Step 2 :🛠️ World transfer
+
+
+### 1. To start the world transfer, switch off the palworld server::
+```sh
+docker-compose down
+```
+
+### 2. Navigate to the Save Directory:
+```sh
+cd /home/servers/palworld-server/data/Pal/Saved/SaveGames/0/#TheNumberOfActualServerGameSave
+```
+
+### 3. Replace Save Files:
+Replace all existing files in this directory with the save files you want to transfer.
+
+### 4. Start the Palworld Server:
+```sh
+docker-compose up -d
+```
+
+### 5. Verify in-game:
+Connect to the game using any player **except the original host** to check if everything is working correctly.
+
+
+## Step 3 :🛠️ Repair host
+
+
+### 1. Restore the Original Host's Character:
+1. Connect to the server with the **former host** to generate the player file.
+2. Create a **new character** with any name and appearance, play for **2-3 minutes** to ensure the player is properly saved.
+3. Disconnect from the server.
+4. On the server, a new file in the `Players` folder should appear—identify the **GUID**.
+
+### 2. Transfer the World Save to a Windows PC:
+```sh
+/home/servers/palworld-server/data/Pal/Saved/SaveGames/0/<YOUR_SAVE>/
+```
+1. Place the `uesave` folder at the root of **C:\**.
+2. Move the save file (32-character name) into the `uesave` folder.
+3. Install Python: [Download Python](https://www.python.org/downloads/).
+
+### 3. Run the Fix Script:
+1. Open **PowerShell as Administrator**.
+2. Install `palworld-save-tools`:
+```sh
+python -m pip install palworld-save-tools==0.23.1
+```
+3. Update `pip`:
+```sh
+python.exe -m pip install --upgrade pip
+```
+4. Navigate to the `uesave` folder:
+```sh
+cd C:\uesave
+```
+5. Run the script to fix the host issue:
+```sh
+python fix_host_save.py C:\uesave\"YourGameSaveFolder" "New_GUID" "Old_GUID" True
+```
+6. Press **Enter** when you see the warning message: _"Warning: Running this script…"_
+
+### 4. Restore the Fixed Save to the Server:
+1. Replace the modified save file back onto the server.
+2. In the `Players` folder, the old ID (`000…1.sav`) should disappear—this is normal as its data is transferred to the **New_GUID**.
+
+### 4. Final Steps:
+- Connect to the server with the **former host** and check if the character is restored.
+- If you experience **guild issues**, leave your guild and rejoin a friend's guild (they must be online). Otherwise, you may lose access to your camp and chests.
+
+🎉 **Enjoy your game!** 🎉
+
+## Sources:
+- [palworld-host-save-fix](https://github.com/xNul/palworld-host-save-fix)
+- [palworld-save-tools](https://github.com/cheahjs/palworld-save-tools)
+- [uesave-rs](https://github.com/trumank/uesave-rs)
+- [YouTube Guide](https://www.youtube.com/watch?v=mTLhWpM-4Do)
+- Special thanks to **@saliktor** for the helpful comment!
+
 

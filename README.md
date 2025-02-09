@@ -76,6 +76,9 @@ docker --version
 
 ```bash
 systemctl start docker
+```
+
+```bash
 systemctl enable docker
 ```
 
@@ -111,6 +114,9 @@ docker-compose --version
 
 ```bash
 mkdir -p /home/servers/palworld-server
+```
+
+```bash
 cd /home/servers/palworld-server
 ```
 

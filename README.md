@@ -12,7 +12,7 @@ Of course, remember to change the default ports and paths if needed.
 
 I want to clarify that I did not create anything; I simply adapted the work of others from GitHub and YouTube to suit my needs.
 
-The sources of my research to create this guide are listed at the end. This guide was created in collaboration with **@Wolfblackry**, thank you to him.
+The sources of my research to create this guide are listed at the end. This guide was created in collaboration with [@Wolfblackry](https://github.com/Wolfblackry), thank you to him.
 
 ---
 

@@ -230,7 +230,7 @@ Connect to the game using any player **except the original host** to check if ev
 ```sh
 /home/servers/palworld-server/data/Pal/Saved/SaveGames/0/<YOUR_SAVE>/
 ```
-1. Place the `uesave` folder at the root of **C:\**.
+1. Download and place the `uesave` folder at the root of **C:\**.
 2. Move the save file (32-character name) into the `uesave` folder.
 3. Install Python: [Download Python](https://www.python.org/downloads/).
 

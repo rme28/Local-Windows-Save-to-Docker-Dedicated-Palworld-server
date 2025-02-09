@@ -155,6 +155,9 @@ services:
 
 ```bash
 systemctl restart docker
+```
+
+```bash
 docker-compose up -d
 ```
 

@@ -191,7 +191,7 @@ docker-compose up -d
 
 ⚠️ **Warning**: The Palworld server may take some time to fully start (usually less than 1 minute).
 
-
+------------------------------------------------------------
 ## Step 2 :🛠️ World transfer
 
 
@@ -216,7 +216,7 @@ docker-compose up -d
 ### 5. Verify in-game:
 Connect to the game using any player **except the original host** to check if everything is working correctly.
 
-
+----------------------------------------------------------------
 ## Step 3 :🛠️ Repair host
 
 

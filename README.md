@@ -268,7 +268,5 @@ python fix_host_save.py C:\uesave\"YourGameSaveFolder" "New_GUID" "Old_GUID" Tru
 - [palworld-host-save-fix](https://github.com/xNul/palworld-host-save-fix)
 - [palworld-save-tools](https://github.com/cheahjs/palworld-save-tools)
 - [uesave-rs](https://github.com/trumank/uesave-rs)
-- [YouTube Guide](https://www.youtube.com/watch?v=mTLhWpM-4Do)
-- Special thanks to **@saliktor** for the helpful comment!
-
+- [YouTube Video Link](https://www.youtube.com/watch?v=mTLhWpM-4Do) : Special thanks to **@saliktor** for the helpful comment!
 

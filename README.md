@@ -126,7 +126,7 @@ cd /home/servers/palworld-server
 nano docker-compose.yml
 ```
 
-### 14. Add the following content to `docker-compose.yml`:
+### 15. Add the following content to `docker-compose.yml`:
 
 ```yaml
 version: '3.8'
@@ -151,7 +151,7 @@ services:
     restart: unless-stopped
 ```
 
-### 15. Start the server:
+### 16. Start the server:
 
 ```bash
 systemctl restart docker
@@ -161,7 +161,7 @@ systemctl restart docker
 docker-compose up -d
 ```
 
-### 16. Get the server's IP address:
+### 17. Get the server's IP address:
 
 ```bash
 hostname -I

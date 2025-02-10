@@ -230,8 +230,8 @@ Connect to the game using any player **except the original host** to check if ev
 ```sh
 /home/servers/palworld-server/data/Pal/Saved/SaveGames/0/<YOUR_SAVE>/
 ```
-1. Download and place the `uesave` folder at the root of **C:\**.
-2. Move the save file (32-character name) into the `uesave` folder.
+1. Download from my Github repository and place the `repair_host` folder at the root of **C:\**.
+2. Move the save file (32-character name) into the `repair_host` folder.
 3. Install Python: [Download Python](https://www.python.org/downloads/).
 
 ### 3. Run the Fix Script:
@@ -244,13 +244,13 @@ python -m pip install palworld-save-tools==0.23.1
 ```sh
 python.exe -m pip install --upgrade pip
 ```
-4. Navigate to the `uesave` folder:
+4. Navigate to the `repair_host` folder:
 ```sh
-cd C:\uesave
+cd C:\repair_host
 ```
 5. Run the script to fix the host issue:
 ```sh
-python fix_host_save.py C:\uesave\"YourGameSaveFolder" "New_GUID" "Old_GUID" True
+python fix_host_save.py C:\repair_host\"YourGameSaveFolder" "New_GUID" "Old_GUID" True
 ```
 6. Press **Enter** when you see the warning message: _"Warning: Running this script…"_
 
@@ -258,7 +258,7 @@ python fix_host_save.py C:\uesave\"YourGameSaveFolder" "New_GUID" "Old_GUID" Tru
 1. Replace the modified save file back onto the server.
 2. In the `Players` folder, the old ID (`000…1.sav`) should disappear—this is normal as its data is transferred to the **New_GUID**.
 
-### 4. Final Steps:
+### 5. Final Steps:
 - Connect to the server with the **former host** and check if the character is restored.
 - If you experience **guild issues**, leave your guild and rejoin a friend's guild (they must be online). Otherwise, you may lose access to your camp and chests.
 
@@ -267,6 +267,5 @@ python fix_host_save.py C:\uesave\"YourGameSaveFolder" "New_GUID" "Old_GUID" Tru
 ## Sources:
 - [palworld-host-save-fix](https://github.com/xNul/palworld-host-save-fix)
 - [palworld-save-tools](https://github.com/cheahjs/palworld-save-tools)
-- [uesave-rs](https://github.com/trumank/uesave-rs)
 - [YouTube Video Link](https://www.youtube.com/watch?v=mTLhWpM-4Do) : Special thanks to **@saliktor** for the helpful comment!
 

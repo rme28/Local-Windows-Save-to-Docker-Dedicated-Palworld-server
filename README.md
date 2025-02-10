@@ -8,6 +8,8 @@ You will find all the commands, from Docker installation to the final configurat
 
 ⚠️ **Warning**: This method only works if you play with at least one friend, as you will need to join their guild at the end.
 
+⚠️ **Warning**: I'd also like to remind you that it's important to make backups of your world before you do anything.
+
 Of course, remember to change the default ports and paths if needed.
 
 I want to clarify that I did not create anything; I simply adapted the work of others from GitHub and YouTube to suit my needs.

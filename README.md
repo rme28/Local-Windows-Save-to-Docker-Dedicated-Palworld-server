@@ -197,7 +197,7 @@ docker-compose up -d
 ## Step 2 :🛠️ World transfer
 
 
-### 1. To start the world transfer, switch off the palworld server::
+### 1. To start the world transfer, switch off the palworld server:
 ```sh
 docker-compose down
 ```
